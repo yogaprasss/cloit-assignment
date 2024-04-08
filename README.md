@@ -1,14 +1,24 @@
-<img src="https://img.shields.io/npm/v/quasar-ui-cloit-assignment.svg?label=quasar-ui-cloit-assignment">
+# Cloit Assignment (cloit-assignment)
+
+Assignment for Cloit
+
+## Install the dependencies
+```bash
+yarn
+# or
+npm install
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
 
-Compatible with Quasar UI v2 and Vue 3.
+### Build the app for production
+```bash
+quasar build
+```
 
-# Structure
-* [/ui](ui) - standalone npm package
-
-
-# Donate
-If you appreciate the work that went into this project, please consider [donating to Quasar](https://donate.quasar.dev).
-
-# License
-MIT (c) yogaprasss <prasetyo.yoga1109@gmail.com>
+### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
