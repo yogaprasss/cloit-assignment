@@ -1,21 +1,26 @@
+import IconCode from 'src/assets/icon-code.png';
+import IconAvatar from 'src/assets/icon-avatar.png';
+import IconKor from 'src/assets/icon-kor.png';
+import IconGear from 'src/assets/icon-gear.png';
+
 export const title = "우리는 국가의 장벽을 넘어 최고의 인재를 매칭해드립니다.";
 export const telephone = "010-0000-0000";
 export const email = "aaaaa@naver.com";
 export const footerItems = [
   {
-    logo: "src/assets/icon-code.png",
+    logo: IconCode,
     title: "해외 개발자 원격 채용"
   },
   {
-    logo: "src/assets/icon-avatar.png",
+    logo: IconAvatar,
     title: "외국인 원격 채용 (비개발)"
   },
   {
-    logo: "src/assets/icon-kor.png",
+    logo: IconKor,
     title: "한국어 가능 외국인 채용"
   },
   {
-    logo: "src/assets/icon-gear.png",
+    logo: IconGear,
     title: "해외 개발자 활용 서비스"
   }
 ];
