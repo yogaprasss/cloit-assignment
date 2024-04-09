@@ -83,7 +83,7 @@
                 <div
                   v-for="skill in item.skills"
                   :key="skill"
-                  class="q-px-lg q-py-xs"
+                  class="q-pa-xs"
                   style="border: 1px solid gray; border-radius: 8px"
                 >
                   {{ skill }}
