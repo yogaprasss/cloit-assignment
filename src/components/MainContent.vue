@@ -130,11 +130,6 @@ export default defineComponent({
       cardList,
       slide: ref(1)
     }
-  },
-  watch: {
-    slide(value) {
-      console.log({ value })
-    }
   }
 })
 </script>

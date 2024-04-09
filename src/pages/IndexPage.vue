@@ -3,6 +3,7 @@
     <div class="main-container">
       <navbar />
       <main-content />
+      <slider />
     </div>
     <div class="footer">
       <footer-content />
@@ -15,13 +16,15 @@ import { defineComponent } from 'vue';
 import Navbar from 'components/Navbar.vue';
 import MainContent from 'components/MainContent.vue';
 import FooterContent from 'components/FooterContent.vue';
+import Slider from 'components/Slider/index.vue';
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     Navbar,
     MainContent,
-    FooterContent
+    FooterContent,
+    Slider
   }
 });
 </script>
