@@ -122,7 +122,8 @@ export default defineComponent({
   transform: translateX(-50%);
   background: transparent;
   position: relative;
-  padding: 80px 8px;
+  padding: 80px 16px;
+  font-size: 16px;
 }
 
 .footer-icon {
@@ -141,11 +142,12 @@ export default defineComponent({
   border-radius: 12px;
   padding: 8px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 599.98px) {
   .footer-container {
-    padding: 40px 8px;
+    padding: 40px 16px;
   }
 }
 </style>

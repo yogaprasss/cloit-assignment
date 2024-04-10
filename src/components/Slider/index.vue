@@ -1,5 +1,5 @@
 <template>
-  <div class="gt-xs slider-container">
+  <div class="gt-xs q-pb-xl slider-container">
     <div
       class="slider-content fade-in"
       :style="{

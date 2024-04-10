@@ -1,5 +1,5 @@
 <template>
-  <q-header class="flex justify-between items-center q-px-sm navbar-container">
+  <q-header class="flex justify-between items-center q-px-md navbar-container">
     <img
       src="~assets/logo-hyperhire.png"
       alt="logo"
@@ -7,7 +7,7 @@
     />
     <div class="gt-xs flex items-center" style="gap: 16px">
       <q-select
-        v-model="selectValue"
+        v-model="selectedValue"
         :label="selectPlaceholder"
         :options="selectOptions"
         borderless
@@ -35,9 +35,10 @@
       @click="toggleMenu"
     />
   </q-header>
-  <div v-show="isShowMenu" class="lt-sm q-px-sm">
+  <!-- Menu for mobile -->
+  <div v-show="isShowMenu" class="lt-sm q-px-md">
     <q-select
-      v-model="selectValue"
+      v-model="selectedValue"
       :label="selectPlaceholder"
       :options="selectOptions"
       borderless
@@ -47,7 +48,7 @@
     />
     <p class="q-mb-none text-weight-bolder" style="color: white">
       {{ text1 }}
-  </p>
+    </p>
     <q-btn
       color="white"
       text-color="primary"
@@ -71,7 +72,7 @@ export default defineComponent({
       buttonLabel,
       selectPlaceholder,
       text1,
-      selectValue: ref(null),
+      selectedValue: ref(null),
       selectOptions,
       isShowMenu: false
     }

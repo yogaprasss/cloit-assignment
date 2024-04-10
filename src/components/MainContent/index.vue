@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mt-lg q-px-sm main-content-container">
+  <div class="q-mt-lg q-px-md main-content-container">
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="fade-in delayed q-mb-md" style="position: relative">
@@ -43,53 +43,20 @@
           arrows
           height="510px"
           style="background: transparent"
-          class="text-white fade-in"
+          class="text-white"
         >
           <q-carousel-slide
             v-for="item in cardList"
-            :key="item.id"
+            :key="item.id"  
             :name="item.id"
           >
-            <div
-              class="q-mb-md fade-in"
-              style="position: absolute; left: 50%; transform: translateX(-50%)"
-            >
-              <div class="popup-card">월 {{ item.rate }}만원</div>
-              <div class="triangle" />
-            </div>
-            <div class="card flex-center" style="color: black; margin-top: 60px">
-              <div style="position: relative;">
-                <img
-                  src="~assets/photo.jpg"
-                  alt="photo"
-                  style="object-fit: cover; width: 128px; height: 128px; border-radius: 50%"
-                />
-                <img
-                  src="~assets/flag.png"
-                  alt="photo"
-                  style="position: absolute; bottom: 0; left: calc(50% + 64px); transform: translateX(-100%);"
-                />
-              </div>
-              <h5 class="q-mt-md q-mb-none text-weight-bolder">
-                {{ item.name }}
-              </h5>
-              <h6 class="q-mt-none q-mb-lg" style="color: #4A77FF">
-                {{ item.position }}
-                <span class="text-weight-bolder">
-                  &bull; {{ item.experience }}y+
-                </span>
-              </h6>
-              <div class="flex justify-center" style="gap: 8px">
-                <div
-                  v-for="skill in item.skills"
-                  :key="skill"
-                  class="q-pa-xs"
-                  style="border: 1px solid gray; border-radius: 8px"
-                >
-                  {{ skill }}
-                </div>
-              </div>
-            </div>
+            <profile-card
+              :rate="item.rate"
+              :name="item.name"
+              :position="item.position"
+              :experience="item.experience"
+              :skills="item.skills"
+            />
           </q-carousel-slide>
         </q-carousel>
         <h5
@@ -115,9 +82,13 @@ import {
   subCardList,
   cardList
 } from 'src/labels/main-content';
+import ProfileCard from './ProfileCard.vue';
 
 export default defineComponent({
   name: 'MainContent',
+  components: {
+    ProfileCard
+  },
   data() {
     return {
       popupText,
@@ -145,7 +116,7 @@ export default defineComponent({
   color: white;
 }
 
-.popup-title, .popup-card {
+.popup-title {
   width: fit-content;
   padding: 4px 12px;
   background: white;
@@ -162,29 +133,6 @@ export default defineComponent({
 	border-top: 10px solid white;
   position: absolute;
   left: 12px;
-}
-
-.popup-card {
-  color: #00C696;
-  font-weight: 700;
-}
-
-.popup-card + .triangle {
-  width: 0;
-	height: 0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 10px solid white;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.card {
-  border-radius: 8px;
-  background: white;
-  padding: 16px;
-  text-align: center;
 }
 
 .fade-in {
